@@ -25,8 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                      "label_password": "Password",
                      "button_login": "Login",
                      "message_success": "Success",
-                     "message_login_success": "You have login successfully",
-                     "ok": "Ok"]
+                     "message_login_success": "You have login successfully"]
         LanguageManager.sharedInstance.add(texts: texts)
         
         

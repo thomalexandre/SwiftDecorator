@@ -14,7 +14,13 @@
 		917E86B4249FE8BB00C05AEC /* SwiftDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E86B3249FE8BB00C05AEC /* SwiftDecoratorTests.swift */; };
 		91FD10C0249FE91300B0C155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10BF249FE91300B0C155 /* LoginViewController.swift */; };
 		91FD10C2249FE92000B0C155 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FD10C1249FE92000B0C155 /* LoginViewController.xib */; };
-		91FD10C4249FECC800B0C155 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10C3249FECC800B0C155 /* LanguageManager.swift */; };
+		91FD10C4249FECC800B0C155 /* MemoryTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10C3249FECC800B0C155 /* MemoryTextProvider.swift */; };
+		91FD10C6249FF03400B0C155 /* TextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10C5249FF03400B0C155 /* TextProvider.swift */; };
+		91FD10C9249FF18600B0C155 /* MissingKeyTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10C8249FF18600B0C155 /* MissingKeyTextProvider.swift */; };
+		91FD10CC249FF25600B0C155 /* LogWarningTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10CB249FF25600B0C155 /* LogWarningTextProvider.swift */; };
+		91FD10D0249FF37A00B0C155 /* MultiLanguageTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10CF249FF37A00B0C155 /* MultiLanguageTextProvider.swift */; };
+		91FD10D2249FF53A00B0C155 /* PlatformTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10D1249FF53A00B0C155 /* PlatformTextProvider.swift */; };
+		91FD10D4249FF66700B0C155 /* PseudoTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD10D3249FF66700B0C155 /* PseudoTextProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,13 @@
 		917E86B5249FE8BB00C05AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FD10BF249FE91300B0C155 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		91FD10C1249FE92000B0C155 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		91FD10C3249FECC800B0C155 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		91FD10C3249FECC800B0C155 /* MemoryTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTextProvider.swift; sourceTree = "<group>"; };
+		91FD10C5249FF03400B0C155 /* TextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProvider.swift; sourceTree = "<group>"; };
+		91FD10C8249FF18600B0C155 /* MissingKeyTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingKeyTextProvider.swift; sourceTree = "<group>"; };
+		91FD10CB249FF25600B0C155 /* LogWarningTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWarningTextProvider.swift; sourceTree = "<group>"; };
+		91FD10CF249FF37A00B0C155 /* MultiLanguageTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLanguageTextProvider.swift; sourceTree = "<group>"; };
+		91FD10D1249FF53A00B0C155 /* PlatformTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTextProvider.swift; sourceTree = "<group>"; };
+		91FD10D3249FF66700B0C155 /* PseudoTextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoTextProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		917E869B249FE8B900C05AEC /* SwiftDecorator */ = {
 			isa = PBXGroup;
 			children = (
+				91FD10C7249FF16800B0C155 /* TextProvider */,
 				917E869C249FE8B900C05AEC /* AppDelegate.swift */,
 				917E869E249FE8B900C05AEC /* SceneDelegate.swift */,
 				917E86A5249FE8BB00C05AEC /* Assets.xcassets */,
@@ -88,7 +101,6 @@
 				917E86AA249FE8BB00C05AEC /* Info.plist */,
 				91FD10BF249FE91300B0C155 /* LoginViewController.swift */,
 				91FD10C1249FE92000B0C155 /* LoginViewController.xib */,
-				91FD10C3249FECC800B0C155 /* LanguageManager.swift */,
 			);
 			path = SwiftDecorator;
 			sourceTree = "<group>";
@@ -100,6 +112,20 @@
 				917E86B5249FE8BB00C05AEC /* Info.plist */,
 			);
 			path = SwiftDecoratorTests;
+			sourceTree = "<group>";
+		};
+		91FD10C7249FF16800B0C155 /* TextProvider */ = {
+			isa = PBXGroup;
+			children = (
+				91FD10C5249FF03400B0C155 /* TextProvider.swift */,
+				91FD10C3249FECC800B0C155 /* MemoryTextProvider.swift */,
+				91FD10C8249FF18600B0C155 /* MissingKeyTextProvider.swift */,
+				91FD10CB249FF25600B0C155 /* LogWarningTextProvider.swift */,
+				91FD10CF249FF37A00B0C155 /* MultiLanguageTextProvider.swift */,
+				91FD10D1249FF53A00B0C155 /* PlatformTextProvider.swift */,
+				91FD10D3249FF66700B0C155 /* PseudoTextProvider.swift */,
+			);
+			path = TextProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +229,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FD10C9249FF18600B0C155 /* MissingKeyTextProvider.swift in Sources */,
+				91FD10D4249FF66700B0C155 /* PseudoTextProvider.swift in Sources */,
+				91FD10D0249FF37A00B0C155 /* MultiLanguageTextProvider.swift in Sources */,
+				91FD10C6249FF03400B0C155 /* TextProvider.swift in Sources */,
 				91FD10C0249FE91300B0C155 /* LoginViewController.swift in Sources */,
 				917E869D249FE8B900C05AEC /* AppDelegate.swift in Sources */,
 				917E869F249FE8B900C05AEC /* SceneDelegate.swift in Sources */,
-				91FD10C4249FECC800B0C155 /* LanguageManager.swift in Sources */,
+				91FD10C4249FECC800B0C155 /* MemoryTextProvider.swift in Sources */,
+				91FD10CC249FF25600B0C155 /* LogWarningTextProvider.swift in Sources */,
+				91FD10D2249FF53A00B0C155 /* PlatformTextProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

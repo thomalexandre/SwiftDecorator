@@ -21,16 +21,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         
-        let texts = ["label_username": "Username",
-                     "label_password": "Password",
-                     "button_login": "Login",
-                     "message_success": "Success",
-                     "message_login_success": "You have login successfully"]
-        LanguageManager.sharedInstance.add(texts: texts)
+        let textsEn = ["label_username": "Username",
+                       "label_password": "Password",
+                       "button_login": "Login",
+                       "message_success": "Success",
+                       "message_login_success": "You have login successfully"]
         
+        let textsFr = ["label_username": "Utilisateur",
+                       "label_password": "Mot de Passe",
+                       "button_login": "Se connecter",
+                       "message_success": "Bravo!",
+                       "message_login_success": "Vous etes connecté",
+                       "message_login_success_ios": "Vous etes connecté sur iOS"]
+        
+        var multiLanguageProvider = MultiLanguageTextProvider()
+        multiLanguageProvider.add(languageCode: "en", text: MemoryTextProvider(texts: textsEn))
+        multiLanguageProvider.add(languageCode: "fr", text: MemoryTextProvider(texts: textsFr))
+        multiLanguageProvider.languageCode = "fr"
+        
+        var textProvider:TextProvider = multiLanguageProvider
+        textProvider = PlatformTextProvider(decoratee: textProvider)
+        textProvider = LogWarningTextProvider(decoratee: textProvider)
+        textProvider = MissingKeyTextProvider(decoratee: textProvider)
+        
+//        #if TEST_BUILD
+        textProvider = PseudoTextProvider(decoratee: textProvider)
+//        #endif
         
         window = UIWindow(windowScene: winScene)
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = LoginViewController(textProvider: textProvider)
         window?.makeKeyAndVisible()
     }
 

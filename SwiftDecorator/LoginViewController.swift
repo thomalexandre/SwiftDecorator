@@ -14,7 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
-    init() {
+    private let textProvider: TextProvider
+    
+    init(textProvider: TextProvider) {
+        self.textProvider = textProvider
         super.init(nibName: "LoginViewController", bundle: nil)
     }
     
@@ -22,20 +25,19 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = LanguageManager.sharedInstance.localise("label_username")
-        passwordLabel.text = LanguageManager.sharedInstance.localise("label_password")
-        loginButton.setTitle(LanguageManager.sharedInstance.localise("button_login"), for: .normal)
+        userNameLabel.text = textProvider.localise("label_username")
+        passwordLabel.text = textProvider.localise("label_password")
+        loginButton.setTitle(textProvider.localise("button_login"), for: .normal)
     }
     
     @IBAction func loginDidPress(_ sender: Any) {
         
-        let alert = UIAlertController(title: LanguageManager.sharedInstance.localise("message_success"),
-                                      message: LanguageManager.sharedInstance.localise("message_login_success"),
+        let alert = UIAlertController(title: textProvider.localise("message_success"),
+                                      message: textProvider.localise("message_login_success"),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: LanguageManager.sharedInstance.localise("ok"), style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: textProvider.localise("ok"), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

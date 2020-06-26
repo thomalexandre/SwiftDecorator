@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +24,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOm-IB-ojB">
                     <rect key="frame" x="20" y="128" width="384" height="21"/>
-                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" systemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -36,7 +38,7 @@
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6G-du-gy6">
                     <rect key="frame" x="20" y="211" width="374" height="21"/>
-                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" systemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -48,21 +50,22 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-aH-B55">
-                    <rect key="frame" x="20" y="294" width="60" height="40"/>
-                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-aH-B55">
+                    <rect key="frame" x="20" y="294" width="100" height="40"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="cbV-cR-7wO"/>
-                        <constraint firstAttribute="width" constant="60" id="rCc-kC-I7T"/>
+                        <constraint firstAttribute="width" constant="100" id="rCc-kC-I7T"/>
                     </constraints>
-                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" systemColor="darkTextColor"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="loginDidPress:" destination="-1" eventType="touchUpInside" id="Jwj-UL-NfY"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemGrayColor"/>
             <constraints>
                 <constraint firstItem="Fg0-Yx-As0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="24Y-sH-9Lf"/>
                 <constraint firstItem="y6G-du-gy6" firstAttribute="top" secondItem="fVo-5C-9Pi" secondAttribute="bottom" constant="20" id="8ls-bW-zJV"/>
@@ -79,8 +82,24 @@
                 <constraint firstItem="fVo-5C-9Pi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hcd-cD-K4x"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UOm-IB-ojB" secondAttribute="trailing" constant="10" id="ifc-jO-8Dq"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

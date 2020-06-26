@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9176A3B124A616AB00F1958C /* MissingKeyTextProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9176A3B024A616AB00F1958C /* MissingKeyTextProviderTests.swift */; };
 		917E869D249FE8B900C05AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E869C249FE8B900C05AEC /* AppDelegate.swift */; };
 		917E869F249FE8B900C05AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917E869E249FE8B900C05AEC /* SceneDelegate.swift */; };
 		917E86A6249FE8BB00C05AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917E86A5249FE8BB00C05AEC /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9176A3B024A616AB00F1958C /* MissingKeyTextProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingKeyTextProviderTests.swift; sourceTree = "<group>"; };
 		917E8699249FE8B900C05AEC /* SwiftDecorator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDecorator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		917E869C249FE8B900C05AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		917E869E249FE8B900C05AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9176A3B224A6170300F1958C /* TextProvider */ = {
+			isa = PBXGroup;
+			children = (
+				91FD10C3249FECC800B0C155 /* LanguageManager.swift */,
+			);
+			path = TextProvider;
+			sourceTree = "<group>";
+		};
+		9176A3B324A6170F00F1958C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				91FD10BF249FE91300B0C155 /* LoginViewController.swift */,
+				91FD10C1249FE92000B0C155 /* LoginViewController.xib */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		9176A3B424A6171B00F1958C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				917E869C249FE8B900C05AEC /* AppDelegate.swift */,
+				917E869E249FE8B900C05AEC /* SceneDelegate.swift */,
+				917E86A5249FE8BB00C05AEC /* Assets.xcassets */,
+				917E86A7249FE8BB00C05AEC /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		917E8690249FE8B900C05AEC = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +111,10 @@
 		917E869B249FE8B900C05AEC /* SwiftDecorator */ = {
 			isa = PBXGroup;
 			children = (
-				917E869C249FE8B900C05AEC /* AppDelegate.swift */,
-				917E869E249FE8B900C05AEC /* SceneDelegate.swift */,
-				917E86A5249FE8BB00C05AEC /* Assets.xcassets */,
-				917E86A7249FE8BB00C05AEC /* LaunchScreen.storyboard */,
+				9176A3B424A6171B00F1958C /* App */,
+				9176A3B324A6170F00F1958C /* Screen */,
+				9176A3B224A6170300F1958C /* TextProvider */,
 				917E86AA249FE8BB00C05AEC /* Info.plist */,
-				91FD10BF249FE91300B0C155 /* LoginViewController.swift */,
-				91FD10C1249FE92000B0C155 /* LoginViewController.xib */,
-				91FD10C3249FECC800B0C155 /* LanguageManager.swift */,
 			);
 			path = SwiftDecorator;
 			sourceTree = "<group>";
@@ -97,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				917E86B3249FE8BB00C05AEC /* SwiftDecoratorTests.swift */,
+				9176A3B024A616AB00F1958C /* MissingKeyTextProviderTests.swift */,
 				917E86B5249FE8BB00C05AEC /* Info.plist */,
 			);
 			path = SwiftDecoratorTests;
@@ -214,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9176A3B124A616AB00F1958C /* MissingKeyTextProviderTests.swift in Sources */,
 				917E86B4249FE8BB00C05AEC /* SwiftDecoratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
